@@ -18,7 +18,7 @@ $(document).ready(function(){
  }
  
  function callBartAPI(stationAbbr){
-     let url = "http://api.bart.gov/api/etd.aspx?cmd=etd&orig=" + stationAbbr + "&json=y&key=" + key;
+     let url = "https://api.bart.gov/api/etd.aspx?cmd=etd&orig=" + stationAbbr + "&json=y&key=" + key;
      console.log(url);
      $.get(url, function(data){
          let trains = data.root.station[0].etd;
